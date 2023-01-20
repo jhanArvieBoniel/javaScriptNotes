@@ -1,0 +1,28 @@
+// Task 1
+let dairy = ["cheese", "sour cream", "milk", "yogurt", "ice cream", "milkshake"];
+function logDairy() {
+    for (prop of dairy) {//to loop output values in an array
+        console.log(prop)//output every string insde the array line by line
+    }
+}
+// Task 2
+const animal = { //a variable
+    canJump: true//property
+};
+const bird = Object.create(animal); //inherited the animal property
+bird.canFly = true; //additional property
+bird.hasFeathers = true;//additional property
+
+function birdCan() {
+    for (prop of Object.keys(bird)) {//check the properties of the object. NOT included prototype properties
+        console.log(prop + ": " + bird[prop])//printout the properties canFly: true and hasFeathers: true 
+    }
+}
+// Task 3
+function animalCan() {
+    for (prop in bird) {
+        //console.log((`${prop}: ${bird[prop]}`))//another approach to print out
+        console.log(prop + ": " + bird[prop])//output the ff canFly: true, hasFeathers: true, canJump: true
+    }
+}
+animalCan()
