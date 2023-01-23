@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    JS script as modules.
+    <script type="module">
+        import { informalGreeting } from './greeting.js';//import ( variable ) from './theFie./';
+        informalGreeting('Jane');//called function from the imported variable above
+    </script>
+    <script type="module">
+        import {informalGreeting, formalGreeting} from './greeting.js';//import ( variable ) from './theFie./';
+        import greeting from './greeting.js'//import variable from './theFie./';
+        formalGreeting('John');//called function from the imported variable above
+        greeting();//called function from the imported variable above
+    </script>
+</body>
+</html>
